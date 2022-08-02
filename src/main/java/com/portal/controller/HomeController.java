@@ -29,5 +29,11 @@ public class HomeController {
 	{
 		return "admin/index";
 	}
+	
+	@GetMapping("/forms")
+	public String forms()
+	{
+		return "admin/pages/forms/addcandidate";
+	}
 
 }
