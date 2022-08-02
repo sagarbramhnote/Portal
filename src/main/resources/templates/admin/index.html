@@ -17,22 +17,22 @@
     <div class="container-scroller">
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.png" alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
               <div class="nav-profile-image">
-                <img src="assets/images/faces/face1.jpg" alt="profile" />
+                <img src="assets/images/faces/photo.jpg" alt="profile" />
                 <span class="login-status online"></span>
                 <!--change to offline or busy as needed-->
               </div>
               <div class="nav-profile-text d-flex flex-column pr-3">
-                <span class="font-weight-medium mb-2">Henry Klein</span>
-                <span class="font-weight-normal">$8,753.00</span>
+                <span class="font-weight-medium mb-2">shalini</span>
+                <!--<span class="font-weight-normal"></span>-->
               </div>
-              <span class="badge badge-danger text-white ml-3 rounded">3</span>
+             <!-- <span class="badge badge-danger text-white ml-3 rounded">3</span>-->
             </a>
           </li>
           <li class="nav-item">
@@ -42,11 +42,11 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <!--<a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="mdi mdi-crosshairs-gps menu-icon"></i>
               <span class="menu-title">Basic UI Elements</span>
               <i class="menu-arrow"></i>
-            </a>
+            </a>-->
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
@@ -61,13 +61,38 @@
               </ul>
             </div>
           </li>
+          
+          
+          
           <li class="nav-item">
+            <a class="nav-link" th:href="@{pages/candidate/cand}">
+              <i class="mdi mdi-contacts menu-icon"></i>
+              <span class="menu-title">Candidates</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{pages/employee/emp}">
+              <i class="mdi mdi-contacts menu-icon"></i>
+              <span class="menu-title">Employees</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{pages/pannel/pannel}">
+              <i class="mdi mdi-contacts menu-icon"></i>
+              <span class="menu-title">Pannels</span>
+            </a>
+          </li>
+          
+          
+         <!-- <li class="nav-item">
             <a class="nav-link" href="pages/icons/mdi.html">
               <i class="mdi mdi-contacts menu-icon"></i>
               <span class="menu-title">Icons</span>
             </a>
-          </li>
-          <li class="nav-item">
+          </li>-->
+          
+          
+         <!-- <li class="nav-item">
             <a class="nav-link" href="pages/forms/basic_elements.html">
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
               <span class="menu-title">Forms</span>
@@ -84,19 +109,24 @@
               <i class="mdi mdi-table-large menu-icon"></i>
               <span class="menu-title">Tables</span>
             </a>
-          </li>
+          </li> 
           <li class="nav-item">
             <span class="nav-link" href="#">
               <span class="menu-title">Docs</span>
             </span>
-          </li>
-          <li class="nav-item">
+          </li>-->
+          
+          
+          
+         <!-- <li class="nav-item">
             <a class="nav-link" href="https://www.bootstrapdash.com/demo/breeze-free/documentation/documentation.html">
               <i class="mdi mdi-file-document-box menu-icon"></i>
               <span class="menu-title">Documentation</span>
             </a>
-          </li>
-          <li class="nav-item sidebar-actions">
+          </li>-->
+          
+          
+          <!--<li class="nav-item sidebar-actions">
             <div class="nav-link">
               <div class="mt-4">
                 <div class="border-none">
@@ -107,10 +137,10 @@
                 </ul>
               </div>
             </div>
-          </li>
+          </li>-->
         </ul>
       </nav>
-      <div class="container-fluid page-body-wrapper">
+     <div class="container-fluid page-body-wrapper">
         <div id="theme-settings" class="settings-panel">
           <i class="settings-close mdi mdi-close"></i>
           <p class="settings-heading">SIDEBAR SKINS</p>
@@ -228,8 +258,8 @@
               </li>
               <li class="nav-item nav-profile dropdown border-0">
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown">
-                  <img class="nav-profile-img mr-2" alt="" src="assets/images/faces/face1.jpg" />
-                  <span class="profile-name">Henry Klein</span>
+                  <img class="nav-profile-img mr-2" alt="" src="assets/images/faces/photo.jpg" />
+                  <span class="profile-name">Shalini</span>
                 </a>
                 <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown">
                   <a class="dropdown-item" href="#">
@@ -244,10 +274,11 @@
             </button>
           </div>
         </nav>
+        
         <div class="main-panel">
           <div class="content-wrapper pb-0">
             <div class="page-header flex-wrap">
-              <h3 class="mb-0"> Hi, welcome back! <span class="pl-0 h6 pl-sm-2 text-muted d-inline-block">Your web analytics dashboard template.</span>
+              <h3 class="mb-0">  Welcome to <span class="pl-0 h6 pl-sm-2 text-muted d-inline-block">Admin  dashboard template.</span>
               </h3>
               <div class="d-flex">
                 <button type="button" class="btn btn-sm bg-white btn-icon-text border">
@@ -265,13 +296,13 @@
                       <div class="card-body px-3 py-4">
                         <div class="d-flex justify-content-between align-items-start">
                           <div class="color-card">
-                            <p class="mb-0 color-card-head">Sales</p>
-                            <h2 class="text-white"> $8,753.<span class="h5">00</span>
+                            <p class="mb-0 color-card-head">Apply Candidates</p>
+                            <h2 class="text-white">100 <span class="h5">100</span>
                             </h2>
                           </div>
                           <i class="card-icon-indicator mdi mdi-basket bg-inverse-icon-warning"></i>
                         </div>
-                        <h6 class="text-white">18.33% Since last month</h6>
+                        <!--<h6 class="text-white">18.33% Since last month</h6>-->
                       </div>
                     </div>
                   </div>
@@ -280,28 +311,46 @@
                       <div class="card-body px-3 py-4">
                         <div class="d-flex justify-content-between align-items-start">
                           <div class="color-card">
-                            <p class="mb-0 color-card-head">Margin</p>
-                            <h2 class="text-white"> $5,300.<span class="h5">00</span>
+                            <p class="mb-0 color-card-head">SelectedCandidates</p>
+                            <h2 class="text-white">25 <span class="h5">25</span>
                             </h2>
                           </div>
                           <i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-danger"></i>
                         </div>
-                        <h6 class="text-white">13.21% Since last month</h6>
+                        <!--<h6 class="text-white">13.21% Since last month</h6>-->
                       </div>
                     </div>
                   </div>
+                  
+                  <div class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
+                    <div class="card bg-danger">
+                      <div class="card-body px-3 py-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                          <div class="color-card">
+                            <p class="mb-0 color-card-head">InterviewdCandidates</p>
+                            <h2 class="text-white">25 <span class="h5">50</span>
+                            </h2>
+                          </div>
+                          <i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-danger"></i>
+                        </div>
+                       <!-- <h6 class="text-white">13.21% Since last month</h6>-->
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
                   <div class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3 pb-lg-0 pb-xl-3">
                     <div class="card bg-primary">
                       <div class="card-body px-3 py-4">
                         <div class="d-flex justify-content-between align-items-start">
                           <div class="color-card">
-                            <p class="mb-0 color-card-head">Orders</p>
-                            <h2 class="text-white"> $1,753.<span class="h5">00</span>
+                            <p class="mb-0 color-card-head">PenddingCandidates</p>
+                            <h2 class="text-white"> 50<span class="h5">50</span>
                             </h2>
                           </div>
                           <i class="card-icon-indicator mdi mdi-briefcase-outline bg-inverse-icon-primary"></i>
                         </div>
-                        <h6 class="text-white">67.98% Since last month</h6>
+                        <!--<h6 class="text-white">67.98% Since last month</h6>-->
                       </div>
                     </div>
                   </div>
@@ -315,7 +364,7 @@
                           </div>
                           <i class="card-icon-indicator mdi mdi-account-circle bg-inverse-icon-success"></i>
                         </div>
-                        <h6 class="text-white">20.32% Since last month</h6>
+                       <!-- <h6 class="text-white">20.32% Since last month</h6>-->
                       </div>
                     </div>
                   </div>
@@ -326,7 +375,7 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col-sm-7">
-                        <h5>Business Survey</h5>
+                        <h5>Candidates survey</h5>
                         <p class="text-muted"> Show overview jan 2018 - Dec 2019 <a class="text-muted font-weight-medium pl-2" href="#"><u>See Details</u></a>
                         </p>
                       </div>
@@ -339,10 +388,10 @@
                       <div class="col-sm-4">
                         <div class="card mb-3 mb-sm-0">
                           <div class="card-body py-3 px-4">
-                            <p class="m-0 survey-head">Today Earnings</p>
+                            <p class="m-0 survey-head">Today Apply Candidates</p>
                             <div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
                               <div>
-                                <h3 class="m-0 survey-value">$5,300</h3>
+                                <h3 class="m-0 survey-value">100</h3>
                                 <p class="text-success m-0">-310 avg. sales</p>
                               </div>
                               <div id="earningChart" class="flot-chart"></div>
@@ -353,10 +402,10 @@
                       <div class="col-sm-4">
                         <div class="card mb-3 mb-sm-0">
                           <div class="card-body py-3 px-4">
-                            <p class="m-0 survey-head">Product Sold</p>
+                            <p class="m-0 survey-head">Selected Candidates</p>
                             <div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
                               <div>
-                                <h3 class="m-0 survey-value">$9,100</h3>
+                                <h3 class="m-0 survey-value">25</h3>
                                 <p class="text-danger m-0">-310 avg. sales</p>
                               </div>
                               <div id="productChart" class="flot-chart"></div>
@@ -367,10 +416,10 @@
                       <div class="col-sm-4">
                         <div class="card">
                           <div class="card-body py-3 px-4">
-                            <p class="m-0 survey-head">Today Orders</p>
+                            <p class="m-0 survey-head">Pendding Candidates</p>
                             <div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
                               <div>
-                                <h3 class="m-0 survey-value">$4,354</h3>
+                                <h3 class="m-0 survey-value">50</h3>
                                 <p class="text-success m-0">-310 avg. sales</p>
                               </div>
                               <div id="orderChart" class="flot-chart"></div>
@@ -390,12 +439,12 @@
                     </div>
                     <div class="row">
                       <div class="col-sm-8">
-                        <p class="text-muted mb-0"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. <b>Learn More</b>
-                        </p>
+                        <!--<p class="text-muted mb-0"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. <b>Learn More</b>
+                        </p>-->
                       </div>
                       <div class="col-sm-4">
-                        <p class="mb-0 text-muted">Sales Revenue</p>
-                        <h5 class="d-inline-block survey-value mb-0"> $2,45,500 </h5>
+                        <p class="mb-0 text-muted">Candidate Revenue</p>
+                        <h5 class="d-inline-block survey-value mb-0"> 5,500 </h5>
                         <p class="d-inline-block text-danger mb-0"> last 8 months </p>
                       </div>
                     </div>
@@ -407,15 +456,15 @@
               <div class="col-xl-8 col-sm-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body px-0 overflow-auto">
-                    <h4 class="card-title pl-4">Purchase History</h4>
+                    <h4 class="card-title pl-4">Candidate History</h4>
                     <div class="table-responsive">
                       <table class="table">
                         <thead class="bg-light">
                           <tr>
-                            <th>Customer</th>
-                            <th>Project</th>
-                            <th>Invoice</th>
-                            <th>Amount</th>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>email id</th>
+                            <th>phoneNumber</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -508,7 +557,10 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
+              
+              
+              
+             <!-- <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <div class="card-title font-weight-medium"> Business Survey </div>
@@ -541,7 +593,9 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
+            
+            
             <div class="row">
               <div class="col-xl-4 grid-margin stretch-card">
                 <div class="card">
@@ -675,7 +729,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-md-6 grid-margin stretch-card">
+             <div class="col-xl-4 col-md-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title text-black">Business Survey</h4>
