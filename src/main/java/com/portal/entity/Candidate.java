@@ -49,8 +49,8 @@ public class Candidate {
 	@Column(name="job_type")
 	private String jobType;
 	
-	@Column(name="job_role")
-	private String jobRole;
+	@Column(name="role")
+	private String role;
 	
 	
 	@Column(name="experience")
@@ -62,14 +62,11 @@ public class Candidate {
 	 @Column(name="status")
 	 private String status;
 
-	 
-	 
 
 
 	public Candidate() {
 		super();
-
-
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -84,14 +81,14 @@ public class Candidate {
 	 * @param pAddress
 	 * @param tAddress
 	 * @param jobType
-	 * @param jobRole
+	 * @param role
 	 * @param experience
 	 * @param about
 	 * @param status
 	 */
 	public Candidate(long id, String firstName, String lastName, String email, String gender, String dob,
 			@Size(max = 15) String phoneNo, @Size(max = 15) String altPhone, String pAddress, String tAddress,
-			String jobType, String jobRole, String experience, String about, String status) {
+			String jobType, String role, String experience, String about, String status) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -104,7 +101,7 @@ public class Candidate {
 		this.pAddress = pAddress;
 		this.tAddress = tAddress;
 		this.jobType = jobType;
-		this.jobRole = jobRole;
+		this.role = role;
 		this.experience = experience;
 		this.about = about;
 		this.status = status;
@@ -198,12 +195,12 @@ public class Candidate {
 		this.jobType = jobType;
 	}
 
-	public String getJobRole() {
-		return jobRole;
+	public String getRole() {
+		return role;
 	}
 
-	public void setJobRole(String jobRole) {
-		this.jobRole = jobRole;
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public String getExperience() {
@@ -234,17 +231,12 @@ public class Candidate {
 	public String toString() {
 		return "Candidate [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 				+ ", gender=" + gender + ", dob=" + dob + ", phoneNo=" + phoneNo + ", altPhone=" + altPhone
-				+ ", pAddress=" + pAddress + ", tAddress=" + tAddress + ", jobType=" + jobType + ", jobRole=" + jobRole
+				+ ", pAddress=" + pAddress + ", tAddress=" + tAddress + ", jobType=" + jobType + ", role=" + role
 				+ ", experience=" + experience + ", about=" + about + ", status=" + status + "]";
-	}
-	
-	
-	 
-	
-	
-	
-	
-	
-	
+	}  
 
+	 
+	 
+	 
+	 
 }
