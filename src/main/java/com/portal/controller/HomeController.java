@@ -47,5 +47,11 @@ public class HomeController {
 	{
 		return "forgotpassword";
 	}
+	
+	@GetMapping("/candidatelogin")
+	public String candidatelogin()
+	{
+		return "job";
+	}
 
 }

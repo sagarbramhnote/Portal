@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="shortcut icon" href="assets/images/favicon.png" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="container-scroller">
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
@@ -96,12 +96,22 @@
               <span class="menu-title">Documentation</span>
             </a>
           </li>
+          
+          
+          
           <li class="nav-item sidebar-actions">
             <div class="nav-link">
               <div class="mt-4">
                 <div class="border-none">
                   <p class="text-black">Notification</p>
                 </div>
+                
+             <div class="nav-link">
+            <a class="nav-link" th:href="@{changepassword}">
+              <span class="menu-title">Change Password</span>
+            </a>
+           </div>
+                
                 <ul class="mt-4 pl-0">
                   <li>Sign Out</li>
                 </ul>
@@ -542,6 +552,9 @@
                 </div>
               </div>
             </div>
+            
+            
+            
             <div class="row">
               <div class="col-xl-4 grid-margin stretch-card">
                 <div class="card">
