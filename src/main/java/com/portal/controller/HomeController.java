@@ -35,5 +35,17 @@ public class HomeController {
 	{
 		return "admin/pages/forms/addcandidate";
 	}
+	
+	@GetMapping("/signup")
+	public String signup()
+	{
+		return "signup";
+	}
+	
+	@GetMapping("/forgotpass")
+	public String forgot()
+	{
+		return "forgotpassword";
+	}
 
 }
