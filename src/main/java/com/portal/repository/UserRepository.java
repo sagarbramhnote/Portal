@@ -6,5 +6,5 @@ import com.portal.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	public User findByUsername(String username);
+	public User findByUsername(String email);
 }
