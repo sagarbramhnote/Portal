@@ -31,13 +31,16 @@ public class User {
 	private boolean enabled =true;
 	private String profile;
 
-	//user many roles
 	
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "user")
-	@JsonIgnore
-	private Set<UserRole> userRoles=new HashSet<>();
-	
-	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", email=" + email + ", phone=" + phone + ", enabled=" + enabled
+				+ ", profile=" + profile + ", userRoles=" + "]";
+	}
+
+
+
 	public User() {
 	
 	}
@@ -56,18 +59,6 @@ public class User {
 		this.phone = phone;
 		this.enabled = enabled;
 		this.profile = profile;
-	}
-
-
-
-	public Set<UserRole> getUserRoles() {
-		return userRoles;
-	}
-
-
-
-	public void setUserRoles(Set<UserRole> userRoles) {
-		this.userRoles = userRoles;
 	}
 
 
