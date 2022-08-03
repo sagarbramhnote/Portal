@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Add Candidate</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="html.design">
+<!-- description -->
+<meta name="description" content="Wizard Form with Validation - Responsive">
+<link rel="shortcut icon" href="images/favicon.ico">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="cssone/bootstrap.min.css">
+<!-- Fontawesome CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+<!-- Fonts and icons -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet"> 
+<!-- Reset CSS -->
+<link rel="stylesheet" href="cssone/reset.css">
+<!-- Style CSS -->
+<link rel="stylesheet" href="cssone/style.css">
+<!-- Responsive  CSS -->
+<link rel="stylesheet" href="cssone/responsive.css">
+</head>
+<body>
+
+<div class="wizard-main">
+	<div id="particles-js"></div>
+	<div class="container">
+		
+			<div class="col-lg-6 login-sec">
+				<div class="login-sec-bg">
+					<h2 class="text-center">Account Information</h2>
+					<form id="example-advanced-form" action="#" style="display: none;">
+						<h3>Profile</h3>
+						<fieldset class="form-input">
+							<h4>Profile Information</h4>
+
+							<label for="name">First name *</label>
+							<input id="name" name="name" type="text" class="form-control required">
+							<label for="surname">Last name *</label>
+							<input id="surname" name="surname" type="text" class="form-control required">
+							<label for="email">Email *</label>
+							<input id="email" name="email" type="text" class="form-control form-controlrequired email">
+
+							<div class="form-group col-md-8">
+                <label for="gender" class="col-form-label">Gender *</label> <select
+                    id="gender" name="gender">
+
+                    <option value="Select">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Ohers">Ohers</option>
+                </select>
+            </div>
+
+            <label for="surname">Date Of Birth*</label>
+							<input id="Date Of Birth" name="dob" type="text" class="form-control required">
+
+ 
+						</fieldset>
+
+						<h3>Personal</h3>
+						<fieldset class="form-input">
+							<h4>Personal Information</h4>
+
+							<label for="Peramennt Address">Peramennt address *</label>
+							<input id="pAddress" name="pAddress" type="text" class="form-control required">
+
+							<label for="Temporary Address">Temporary Address *</label>
+							<input id="tAddress" name="tAddress" type="text" class="form-control required">
+
+							<label for="Peramennt Address">Phone No *</label>
+							<input id="pAddress" name="phoneNo" type="text" class="form-control required">
+
+							<label for="Alternate PhoneNo">Alternate PhoneNo *</label>
+							<input id="tAddress" name="altPhone" type="text" class="form-control required">
+
+
+
+
+
+							
+						</fieldset>
+ 
+
+						<h3>Skill</h3>
+						<fieldset class="form-input">
+							<h4>Qualification</h4>
+
+							 <div class="form-group col-md-8">
+                <label for="jobType" class="col-form-label">Job Type</label> <select
+                    id="status" name="jobType">
+
+                    <option value="Select">Select</option>
+                    <option value="Permanent">Permanent</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Contaract">Contaract</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-8">
+                <label for="jobRole" class="col-form-label">Job Role</label> <select
+                    id="jobRole" name="jobRole">
+
+                    <option value="Select">Select</option>
+                    <option value="java Developer">java Developer</option>
+                    <option value="Python developer">Python developer</option>
+                    <option value="UI developer">UI developer</option>
+                </select>
+            </div>   
+               <div class="form-group col-md-8">
+                <label for="experience" class="col-form-label">Experience</label> <select
+                    id="experience" name="experience">
+
+                    <option value="Select">Select</option>
+
+                    <option value="Fresher">Fresher</option>
+                    <option value="one year">one year</option>
+                    <option value="Two years">Two years</option>
+                    <option value="Three years">Three years</option>
+
+                    <option value="Four Above">Four Above</option>
+                </select>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="about" class="col-form-label">Write About U</label> <input
+                    type="text" th:field="*{about}" class="form-control" id="about"
+                    placeholder="Write About"> <span
+                    th:if="${#fields.hasErrors('about')}" th:errors="*{about}"
+                    class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-8">
+                <label for="status" class="col-form-label">Interview Status</label>
+                <select id="status" name="status">
+
+                    <option value="Select">Select</option>
+                    <option value="Ready to take Interview">Ready to take
+                        Interview</option>
+                    <option value="Interview Completed">Interview Completed</option>
+                    <option value="Postponed Interview">Postponed Interview</option>
+                    <option value="Not eligible">Not eligible</option>
+                    <option value="Selected">Selected</option>
+                </select>
+            </div>
+ 
+						</fieldset>
+					</form>			
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+
+<!-- jquery latest version -->
+<script src="jsone/jquery.min.js"></script>
+<!-- popper.min.js -->
+<script src="jsone/popper.min.js"></script>    
+<!-- bootstrap js -->
+<script src="jsone/bootstrap.min.js"></script>
+<!-- jquery.steps js -->
+<script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js'></script>
+<script src="jsone/jquery.steps.js"></script>
+<!-- particles js -->
+<script src="jsone/particles.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		particlesJS("particles-js", 
+			{
+			  "particles": {
+				"number": {
+				  "value": 160,
+				  "density": {
+					"enable": true,
+					"value_area": 800
+				  }
+				},
+				"color": {
+				  "value": "#ffffff"
+				},
+				"shape": {
+				  "type": "circle",
+				  "stroke": {
+					"width": 0,
+					"color": "#000000"
+				  },
+				  "polygon": {
+					"nb_sides": 5
+				  },
+				  "image": {
+					"src": "img/github.svg",
+					"width": 100,
+					"height": 100
+				  }
+				},
+				"opacity": {
+				  "value": 1,
+				  "random": true,
+				  "anim": {
+					"enable": true,
+					"speed": 1,
+					"opacity_min": 0,
+					"sync": false
+				  }
+				},
+				"size": {
+				  "value": 3,
+				  "random": true,
+				  "anim": {
+					"enable": false,
+					"speed": 4,
+					"size_min": 0.3,
+					"sync": false
+				  }
+				},
+				"line_linked": {
+				  "enable": false,
+				  "distance": 150,
+				  "color": "#ffffff",
+				  "opacity": 0.4,
+				  "width": 1
+				},
+				"move": {
+				  "enable": true,
+				  "speed": 1,
+				  "direction": "none",
+				  "random": true,
+				  "straight": false,
+				  "out_mode": "out",
+				  "bounce": false,
+				  "attract": {
+					"enable": false,
+					"rotateX": 600,
+					"rotateY": 600
+				  }
+				}
+			  },
+			  "interactivity": {
+				"detect_on": "canvas",
+				"events": {
+				  "onhover": {
+					"enable": true,
+					"mode": "bubble"
+				  },
+				  "onclick": {
+					"enable": true,
+					"mode": "repulse"
+				  },
+				  "resize": true
+				},
+				"modes": {
+				  "grab": {
+					"distance": 400,
+					"line_linked": {
+					  "opacity": 1
+					}
+				  },
+				  "bubble": {
+					"distance": 250,
+					"size": 0,
+					"duration": 2,
+					"opacity": 0,
+					"speed": 3
+				  },
+				  "repulse": {
+					"distance": 400,
+					"duration": 0.4
+				  },
+				  "push": {
+					"particles_nb": 4
+				  },
+				  "remove": {
+					"particles_nb": 2
+				  }
+				}
+			  },
+			  "retina_detect": true
+			}
+    	);
+	});
+</script>
+
+<script>
+	var form = $("#example-advanced-form").show();
+
+	form.steps({
+		headerTag: "h3",
+		bodyTag: "fieldset",
+		transitionEffect: "slideLeft",
+		onStepChanging: function (event, currentIndex, newIndex)
+		{
+			// Allways allow previous action even if the current form is not valid!
+			if (currentIndex > newIndex)
+			{
+				return true;
+			}
+			// Forbid next action on "Warning" step if the user is to young
+			if (newIndex === 3 && Number($("#age").val()) < 18)
+			{
+				return false;
+			}
+			// Needed in some cases if the user went back (clean up)
+			if (currentIndex < newIndex)
+			{
+				// To remove error styles
+				form.find(".body:eq(" + newIndex + ") label.error").remove();
+				form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+			}
+			form.validate().settings.ignore = ":disabled,:hidden";
+			return form.valid();
+		},
+		onStepChanged: function (event, currentIndex, priorIndex)
+		{
+			// Used to skip the "Warning" step if the user is old enough.
+			if (currentIndex === 2 && Number($("#age").val()) >= 18)
+			{
+				form.steps("next");
+			}
+			// Used to skip the "Warning" step if the user is old enough and wants to the previous step.
+			if (currentIndex === 2 && priorIndex === 3)
+			{
+				form.steps("previous");
+			}
+		},
+		onFinishing: function (event, currentIndex)
+		{
+			form.validate().settings.ignore = ":disabled";
+			return form.valid();
+		},
+		onFinished: function (event, currentIndex)
+		{
+			alert("Submitted!");
+		}
+	}).validate({
+		errorPlacement: function errorPlacement(error, element) { element.before(error); },
+		rules: {
+			confirm: {
+				equalTo: "#password"
+			}
+		}
+	});
+</script>
+
+</body>
+</html>
