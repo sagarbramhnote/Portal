@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Users</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+</head>
+<body>
+	<div class="container my-2">
+		<div class="card">
+			<div class="card-body">
+				<div th:switch="${Candidates}" class="container my-5">
+						<div>
+					
+					<h3>Candidates History</h3>
+					       <form th:action="@{filter}" methode="get">
+					       
+					       
+					     
+							  <label for="filter" class="col-form-label">filter</label>
+									<select id="filter" name="field">
+									
+									   <option value="select">select</option>
+									   <option value="name">select by name</option>
+									   <option value="phone">select by phoneno</option>
+									   <option value="email">select by email</option>
+									   <option value="address">select by address</option>
+									   </select>
+									 Search:<input type="text" name="keyword"  th:value="${keyword}" required/>
+					        <input type="submit" value="search"/>
+					      
+					       <input type="button" value="clear"/>
+							
+					     </form>
+					</div>
+					
+					
+					<div class="col-md-10">
+						<!--<h2 th:case="null">No Students yet!</h2>-->
+						<div th:case="*">
+							<table class="table table-striped table-responsive-md">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Phone No</th>
+										<th>Address</th>
+										<th>alternatePhoneNo</th>
+										<th>Edit</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="student : ${Candidate}">
+										<td th:text="${student.name}"></td>
+										<td th:text="${student.email}"></td>
+										<td th:text="${student.phoneNo}"></td>
+										<td th:text="${student.address}"></td>
+										<td th:text="${student.alternatePhoneNumber}"></td>
+										<td><a th:href="@{/students/edit/{id}(id=${student.id})}"
+											class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
+										<td><a
+											th:href="@{/students/delete/{id}(id=${student.id})}"
+											class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						</div>
+						
+		<div th:if = "${totalPages > 1}">
+			<div class = "row col-sm-15">
+				<div class = "col-sm-5">
+					Total Candidates: [[${totalItems}]] 
+				</div>
+				<div class = "col-sm-2">
+					<span th:each="i: ${#numbers.sequence(1, totalPages)}">
+						<a th:if="${currentPage != i}" th:href="@{'/page/' + ${i}}">[[${i}]]</a>
+						<span th:unless="${currentPage != i}">[[${i}]]</span>  &nbsp; &nbsp;
+					</span>
+				</div>
+				<div class = "col-sm-1">
+					<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1}}">Next</a>
+					<span th:unless="${currentPage < totalPages}">Next</span>
+				</div>
+
+				 <div class="col-sm-1">
+    				<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages}}">Last</a>
+					<span th:unless="${currentPage < totalPages}">Last</span>
+   				 </div>
+			</div>
+	</div>
+			
+						
+						
+			</div>
+			</div>
+		</div>
+	</div>
+	<p class="my-5">
+						<a href="/students/logout" class="btn btn-primary"><i
+							class="fas fa-user-plus ml-2"> Logout</i></a>
+					</p>
+</body>

@@ -7,9 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.portal.entity.User;
 import com.portal.repository.UserRepository;
@@ -32,10 +33,16 @@ public class HomeController {
 		return "job";
 	}
 	
+	@PostMapping("/user")
+	public void createUser(@RequestBody User user) {
+		
+		uR.save(user);
+		
+//		return local ;
+		
+	}
 	@GetMapping("/login")
 	public String login() {
-		
-		
 		
 		return "login";
 	}
@@ -54,7 +61,7 @@ public class HomeController {
 			}
 			model.addAttribute("message", "Incorrect password");
 		}
-		return "login";
+		return "admin/index";
 	}
 
 }
