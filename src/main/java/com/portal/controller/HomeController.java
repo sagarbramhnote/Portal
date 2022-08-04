@@ -44,8 +44,6 @@ public class HomeController {
 	@GetMapping("/login")
 	public String login() {
 		
-		
-		
 		return "login";
 	}
 	@RequestMapping(path = "/adminhome" , method = RequestMethod.POST)
@@ -63,7 +61,7 @@ public class HomeController {
 			}
 			model.addAttribute("message", "Incorrect password");
 		}
-		return "login";
+		return "admin/index";
 	}
 
 }
